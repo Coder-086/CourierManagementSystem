@@ -17,3 +17,13 @@ function contact(event){
       window.open("/main", "_self");
     },1500)
 }
+
+function updateaccount(event){
+    event.preventDefault();
+
+    console.log('I am in Update Account');
+    const logemail = localStorage.getItem('loginEmail');
+    const name = document.getElementById('name').value;
+    const email
+    console.log(email);
+}

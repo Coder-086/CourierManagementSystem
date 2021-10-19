@@ -32,6 +32,11 @@ function login(event){
     		console.log(res);
     		if (res.status == 200) {
     			swal("Good job!", "LoggedIn Successfully", "success");
+    			localStorage.setItem('loginEmail', email);
+                console.log(localStorage.getItem('loginEmail'));
+    			setTimeout(()=>{
+                		window.open('/main', "_self");
+                },1500)
     		} else {
     			swal("OOPS!!!!!!", "Failed to Login", "warning");
     		}
