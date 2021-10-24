@@ -31,9 +31,7 @@
                          <li class="nav-item active">
                              <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting</a>
                          </li>
-                         <li class="nav-item active">
-                             <a class="nav-link" onclick="logout(event)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout</a>
-                         </li>
+
                      </ul>
                  </div>
           </nav>

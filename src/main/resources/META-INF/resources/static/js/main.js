@@ -1,12 +1,3 @@
-function logout(event){
-    event.preventDefault();
-  
-    console.log('I am in Logout Function');
-    swal("Great!", "Logout Successfully", "success");
-    setTimeout(()=>{
-      window.open("/", "_self");
-    },1500)
-}
 
 function contact(event){
     event.preventDefault();
@@ -18,12 +9,26 @@ function contact(event){
     },1500)
 }
 
+function logout(event){
+    event.preventDefault();
+
+    console.log('I am in Logout Function');
+    swal("Great!", "Logout Successfully", "success");
+    setTimeout(()=>{
+      window.open("/", "_self");
+    },1500)
+}
+
 function updateaccount(event){
     event.preventDefault();
 
     console.log('I am in Update Account');
     const logemail = localStorage.getItem('loginEmail');
     const name = document.getElementById('name').value;
-    const email
-    console.log(email);
+}
+
+function updatepassword(event){
+    event.preventDefault();
+
+    console.log('I am in update password');
 }
