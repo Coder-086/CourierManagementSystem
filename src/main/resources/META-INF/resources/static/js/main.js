@@ -1,14 +1,3 @@
-
-function contact(event){
-    event.preventDefault();
-  
-    console.log('I am submitting now');
-    swal("Great!", "Query Sent Successfully", "success");
-    setTimeout(()=>{
-      window.open("/main", "_self");
-    },1500)
-}
-
 function logout(event){
     event.preventDefault();
 

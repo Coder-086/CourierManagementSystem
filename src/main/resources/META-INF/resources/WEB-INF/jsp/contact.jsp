@@ -52,12 +52,12 @@
             <br>
             <div class="form-group ">
                 <label for="exampleFormControlInput1 ">Description</label>
-                <input type="desc " class="form-control " id="desc" name="desc" placeholder=" Enter some Description about you ">
+                <input type="desc " class="form-control " id="desc" name="desc" placeholder=" Enter Your Query ">
             </div>
             <br>
             <center><button class="btn btn-primary " type="submit" onclick="contact(event)">Submit</button></center>
     
         </form>
 </body>
-<script src="../../static/js/main.js"></script>
+<script src="../../static/js/contact.js"></script>
 </html>
