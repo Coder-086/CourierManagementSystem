@@ -15,8 +15,8 @@ public class UserDAO {
     private JdbcTemplate jdbcTemplate;
 
     public void save(User user) throws Exception {
-        String insertQuery = String.format("INSERT INTO users (email, password, username) VALUES('%s', '%s', '%s')",
-                user.getEmail(), user.getPassword(), user.getUsername());
+        String insertQuery = String.format("INSERT INTO users (email, password, username, number) VALUES('%s', '%s', '%s', '%s')",
+                user.getEmail(), user.getPassword(), user.getUsername(), user.getNumber());
 
         System.out.println("[REPOSITORY]::[USERDAO]::[Save]::insertQuery " + insertQuery);
         jdbcTemplate.execute(insertQuery);

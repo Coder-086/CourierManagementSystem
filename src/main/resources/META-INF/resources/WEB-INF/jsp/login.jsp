@@ -52,6 +52,10 @@
               <input type="email" id="Email" placeholder="Email" required=""/>
             </div>
             <div class="input-field">
+               <i class="fas fa-phone"></i>
+               <input type="text" id="number" placeholder="Phone Number" required=""/>
+            </div>
+            <div class="input-field">
               <i class="fas fa-lock"></i>
               <input type="password" id="Password" required="" placeholder="Password"/>
             </div>

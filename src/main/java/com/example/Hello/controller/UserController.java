@@ -26,7 +26,7 @@ public class UserController {
         user.setUsername(userparam.getUsername());
         user.setEmail(userparam.getEmail());
         user.setPassword(userparam.getPassword());
-
+        user.setNumber(userparam.getNumber());
         if (!userService.isAccountExist(userparam)) {
             userService.saveUser(user);
             return new ResponseEntity<>(HttpStatus.OK);

@@ -9,33 +9,31 @@
 </head>
 <body>
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                 <a class="navbar-brand" href="/main"><b>Courier Management System</b></a>
-                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-           </button>
+                      <a class="navbar-brand" href="#"><b>Courier Management System</b></a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
 
-                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                     <ul class="navbar-nav mr-auto">
-                         <li class="nav-item active">
-                             <a class="nav-link" href="/main">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a>
-                         </li>
-                         <li class="nav-item active">
-                             <a class="nav-link" href="contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Us</a>
-                         </li>
-                          <li class="nav-item active">
-                             <a class="nav-link" href="/main">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Billing</span></a>
-                          </li>
-                          <li class="nav-item active">
-                             <a class="nav-link" href="about">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us</span></a>
-                          </li>
-
-                         <li class="nav-item active">
-                             <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting</a>
-                         </li>
-
-                     </ul>
-                 </div>
-          </nav>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                  <a class="nav-link" href="/main">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a>
+                              </li>
+                              <li class="nav-item active">
+                                  <a class="nav-link" href="contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Us</a>
+                              </li>
+                              <li class="nav-item active">
+                                  <a class="nav-link" href="/main">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Billing</span></a>
+                              </li>
+                              <li class="nav-item active">
+                                  <a class="nav-link" href="about">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us</span></a>
+                              </li>
+                              <li class="nav-item active">
+                                  <a class="nav-link" href="setting">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </nav>
     <div class="container-fluid my-0 px-0 mb-3 ">
         <img src="../../static/pics/unnamed.jpg" class="d-block w-100 mx-0" alt="..."> </div>
         <br>

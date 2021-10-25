@@ -22,6 +22,9 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "number")
+    private String number;
+
     @Column(name = "otp")
     private Integer otp;
 
@@ -55,5 +58,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 }

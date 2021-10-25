@@ -31,14 +31,14 @@ function login(event){
     	}).then(data => data).then(res => {
     		console.log(res);
     		if (res.status == 200) {
-    			swal("Good job!", "LoggedIn Successfully", "success");
+    			swal("Good job!", "Login Successfully", "success");
     			localStorage.setItem('loginEmail', email);
                 console.log(localStorage.getItem('loginEmail'));
     			setTimeout(()=>{
                 		window.open('/main', "_self");
                 },1500)
     		} else {
-    			swal("OOPS!!!!!!", "Failed to Login", "warning");
+    			swal("OOPS!!!!!!", "Username or Password Incorrect", "warning");
     		}
     	}).catch(err => {
     		swal("OOPS!!!!!!", "Failed to Login", "error");
@@ -51,13 +51,25 @@ function signup(event){
 
     const user_name = document.getElementById("Username").value;
     const email_id  = document.getElementById("Email").value;
+    var number = document.getElementById("number").value;
     const password  = document.getElementById("Password").value;
     const confirm_password = document.getElementById("confirm_password").value;
 
-    console.log(user_name, email_id, password, confirm_password);
+    console.log('Length of the Number is :::::: ' + number.length);
+    console.log(user_name, email_id, number, password, confirm_password);
 
-    if(user_name == "" || email_id=="" || password=="" || confirm_password==""){
+    if(user_name == "" || email_id=="" || number == "" || password=="" || confirm_password==""){
         swal("OOPS!!!!!!", "Fill Up all the Columns", "warning");
+        return;
+    }
+
+    if(number.length != 10){
+        swal("OOPS!!!!!!", "Please Provide Correct Number", "warning");
+        return;
+    }
+
+    if(password.length < 6){
+        swal("OOPS!!!!!!", "Password Should be minimum of 6 Characters", "warning");
         return;
     }
 
@@ -70,14 +82,18 @@ function signup(event){
            			body: JSON.stringify({
            				username: user_name,
            				email: email_id,
+           				number: number,
            				password: password
            			})
            		}).then(data => data).then(res => {
                   	console.log(res);
                		if (res.status == 200) {
                   			swal("Good job!", "SignedUp Successfully", "success");
+                  		    setTimeout(()=>{
+                                window.open("/", "_self");
+                            },1500)
                   	} else {
-                  			swal("OOPS!!!!!!", "Failed to Singup", "error");
+                  			swal("OOPS!!!!!!", "Email Already Exist's with us", "error");
                   	}
                 }).catch(err => {
                   		swal("OOPS!!!!!!", "User Registration Failed", "error");

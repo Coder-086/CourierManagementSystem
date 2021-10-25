@@ -4,6 +4,7 @@ public class UserDTO {
     private String username;
     private String email;
     private String password;
+    private String number;
     private int otp;
 
     public String getUsername() {
@@ -28,6 +29,14 @@ public class UserDTO {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public int getOtp() {

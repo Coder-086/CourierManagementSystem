@@ -10,29 +10,33 @@
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                 <a class="navbar-brand" href="#"><b>Courier Management System</b></a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
 
-	<div id="app">
-		<div class="container height-100 d-flex justify-content-center align-items-center">
-			<div class="position-relative">
-				<div class="card alert-danger text-center">
-					<h6>Please enter the one time password <br> </h6>
-					<div class="inputBox">
-                    				<input type="text" id = "otp" name="OTP" required="">
-                    				<label for="">OTP</label>
-                    </div>
- 					<div class="mt-4"> <button class="btn btn-danger px-4 validate" onclick="Otp(event)" >Validate</button> </div>
-					<div class="mt-3 content d-flex justify-content-center align-items-center"> <span>Didn't get the code</span> <a href="#" class="text-decoration-none ms-3">Resend(1/3)</a> </div>
-				</div>
-			</div>
-		</div>
-	</div>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav mr-auto">
+                         <li class="nav-item active">
+                             <a class="nav-link" href="/main">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a>
+                         </li>
+                         <li class="nav-item active">
+                             <a class="nav-link" href="contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Us</a>
+                         </li>
+                         <li class="nav-item active">
+                             <a class="nav-link" href="/main">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Billing</span></a>
+                         </li>
+                         <li class="nav-item active">
+                             <a class="nav-link" href="about">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us</span></a>
+                         </li>
+                         <li class="nav-item active">
+                             <a class="nav-link" href="setting">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting</a>
+                         </li>
+                     </ul>
+                 </div>
+             </nav>
 
-
-
-
-
-		</form>
-	</div>
 </body>
 <script src="../../static/js/login.js"></script>
 </html>
