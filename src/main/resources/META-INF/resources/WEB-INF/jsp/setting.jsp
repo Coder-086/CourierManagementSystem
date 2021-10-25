@@ -105,13 +105,13 @@
 							<div class="col-md-6">
 								<div class="form-group">
 								  	<label>New password</label>
-								  	<input type="password" id="password" class="form-control">
+								  	<input type="password" id="newpassword" class="form-control">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 								  	<label>Confirm new password</label>
-								  	<input type="password" id="newpassword" class="form-control">
+								  	<input type="password" id="confirmpassword" class="form-control">
 								</div>
 							</div>
 						</div>

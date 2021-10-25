@@ -107,6 +107,9 @@ function updatepassword(event){
                    }).then(data => data).then(res => {
                     if (res.status == 200) {
                       swal("Great!", "Password Updated Successfully", "success");
+                      setTimeout(()=>{
+                              window.open("/setting", "_self");
+                      },1500)
                     } else {
                       swal("OOPS!!!!!!", "Old Password is Incorrect", "error")
                     }
