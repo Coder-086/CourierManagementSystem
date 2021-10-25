@@ -91,4 +91,52 @@ public class UserController {
         userService.setPassword(user);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/account", method = RequestMethod.POST)
+    public ResponseEntity account(@RequestBody UserDTO userParam) throws Exception{
+        System.out.println("Account>>>" + userParam.getUsername() + " " + userParam.getNumber() + " " + userParam.getAddress());
+
+        User user = new User();
+
+        user.setUsername(userParam.getUsername());
+        user.setNumber(userParam.getNumber());
+        user.setAddress(userParam.getAddress());
+        user.setEmail(userParam.getEmail());
+
+        userService.updateaccount(user);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/checkpassword", method = RequestMethod.POST)
+    public ResponseEntity passwordCheck(@RequestBody UserDTO userParam) throws Exception {
+        System.out.println("Password :::::: " + userParam.getPassword() + "Email :: " + userParam.getEmail());
+
+        User user = new User();
+
+        user.setEmail(userParam.getEmail());
+        user.setPassword(userParam.getPassword());
+
+        int password = userService.checkpassword(user);
+
+        int userPassword = Integer.parseInt(user.getPassword());
+        System.out.println("USER ENTERED PASSWORD :::::" + userPassword + "PASSWORD ::: " + password);
+        if(password == userPassword){
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+    @RequestMapping(value = "/updatepassword", method = RequestMethod.POST)
+    public ResponseEntity updatedPassword(@RequestBody UserDTO userParam) throws Exception {
+        System.out.println("Password :::::: " + userParam.getPassword() + "Email :: " + userParam.getEmail());
+
+        User user = new User();
+
+        user.setPassword(userParam.getPassword());
+        user.setEmail(userParam.getEmail());
+
+        userService.updatePassword(user);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }

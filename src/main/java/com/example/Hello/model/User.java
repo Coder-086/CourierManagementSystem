@@ -25,6 +25,9 @@ public class User {
     @Column(name = "number")
     private String number;
 
+    @Column(name = "address")
+    private String address;
+
     @Column(name = "otp")
     private Integer otp;
 
@@ -66,5 +69,13 @@ public class User {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

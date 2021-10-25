@@ -77,4 +77,20 @@ public class UserService {
     public void setPassword(User user) throws Exception {
         userDAO.UpdatePassword(user);
     }
+
+    public void updateaccount(User user) throws Exception{
+        userDAO.updateaccount(user);
+    }
+
+    public int checkpassword(User user) throws Exception{
+        int password = userDAO.checkpassword(user);
+
+        System.out.println("PASSWORD ::::: " + password);
+        return password;
+    }
+
+    public void updatePassword(User user) throws Exception{
+        userDAO.updatePassword(user);
+    }
+
 }

@@ -5,6 +5,7 @@ public class UserDTO {
     private String email;
     private String password;
     private String number;
+    private String address;
     private int otp;
 
     public String getUsername() {
@@ -37,6 +38,14 @@ public class UserDTO {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public int getOtp() {

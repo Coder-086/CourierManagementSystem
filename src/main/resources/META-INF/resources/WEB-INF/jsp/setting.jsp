@@ -64,7 +64,7 @@
 				</div>
 				<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
 					<div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
-						<h3 class="mb-4">Account Settings</h3>
+						<h3 class="mb-4">Update Details</h3>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
@@ -75,12 +75,6 @@
 
 							<div class="col-md-6">
 								<div class="form-group">
-								  	<label>Email</label>
-								  	<input type="text" id="email" class="form-control">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
 								  	<label>Phone number</label>
 								  	<input type="text" id="number" class="form-control">
 								</div>
@@ -88,13 +82,13 @@
 							<div class="col-md-12">
 								<div class="form-group">
 								  	<label>Address</label>
-									<textarea class="form-control" rows="4"></textarea>
+									<textarea class="form-control" id = "address" rows="4"></textarea>
 								</div>
 							</div>
 						</div>
 						<div>
 							<button class="btn btn-primary" onclick="updateaccount(event)">Update</button>
-							<button class="btn btn-light">Cancel</button>
+							<button class="btn btn-light" onclick="cancel(event)">Cancel</button>
 						</div>
 					</div>
 					<div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
@@ -103,7 +97,7 @@
 							<div class="col-md-6">
 								<div class="form-group">
 								  	<label>Old password</label>
-								  	<input type="password" class="form-control">
+								  	<input type="password" id="oldpassword" class="form-control">
 								</div>
 							</div>
 						</div>
@@ -111,19 +105,19 @@
 							<div class="col-md-6">
 								<div class="form-group">
 								  	<label>New password</label>
-								  	<input type="password" class="form-control">
+								  	<input type="password" id="password" class="form-control">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 								  	<label>Confirm new password</label>
-								  	<input type="password" class="form-control">
+								  	<input type="password" id="newpassword" class="form-control">
 								</div>
 							</div>
 						</div>
 						<div>
 							<button class="btn btn-primary" onclick = "updatepassword(event)">Update</button>
-							<button class="btn btn-light">Cancel</button>
+							<button class="btn btn-light" onclick="cancel(event)">Cancel</button>
 						</div>
 					</div>
 

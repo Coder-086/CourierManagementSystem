@@ -41,9 +41,37 @@ public class UserDAO {
     }
 
     public void UpdatePassword(User user) {
-        String updateQuery = String.format("UPDATE users SET password = '%s' where email = '%s'", user.getPassword(),
+        String updateQuery = String.format("UPDATE users SET password = '%s' where email = '%s'",
+                user.getPassword(),
                 user.getEmail());
         System.out.println("[REPOSITORY]::[USERDAO]::[Update]::updateQuery " + updateQuery);
+        jdbcTemplate.execute(updateQuery);
+    }
+
+    public void updateaccount(User user){
+        String updateQuery = String.format("UPDATE users SET username = '%s', number = '%s', address = '%s' where email = '%s'",
+                user.getUsername(), user.getNumber(), user.getAddress(), user.getEmail());
+
+        System.out.println("[REPOSITORY]::[USERDAO]::[Update]::updateQuery " + updateQuery);
+        jdbcTemplate.execute(updateQuery);
+    }
+
+    public int checkpassword(User user){
+        String selectQuery = String.format("SELECT password from users where email = '%s' ", user.getEmail());
+
+        System.out.println("[REPOSITORY]::[USERDAO]::[Select]::SelectQuery " + selectQuery);
+        var resultSet = jdbcTemplate.queryForList(selectQuery);
+        System.out.println("RESULTSET ::: " + resultSet);
+
+        var num = resultSet.get(0).get("password").toString();
+        System.out.println("RETURNING PASSWORD :::: " + num);
+        return Integer.parseInt(num);
+    }
+
+    public void updatePassword(User user){
+        String updateQuery = String.format("UPDATE users SET password = '%s' where email = '%s'", user.getPassword(), user.getEmail());
+
+        System.out.println("[REPOSITORY]::[USERDAO]::[Update]::updateQuery" + updateQuery);
         jdbcTemplate.execute(updateQuery);
     }
 
