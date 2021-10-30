@@ -33,6 +33,13 @@
                      <li class="nav-item active">
                          <a class="nav-link" href="setting">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting</a>
                      </li>
+                      <li class="user">
+                          <a class="nav-link" href="setting">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello, </a>
+                      </li>
+                      <li class="nav-item active">
+                           <p id="loggeduser">&nbsp;&nbsp;USER </p>
+                      </li>
+
                  </ul>
              </div>
          </nav>

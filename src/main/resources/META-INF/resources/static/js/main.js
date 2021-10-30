@@ -1,3 +1,9 @@
+user = localStorage.getItem("loggedUser");
+userObj = JSON.parse(user);
+console.log(userObj);
+
+document.getElementById("loggeduser").innerHTML = userObj.username;
+
 function logout(event){
     event.preventDefault();
 

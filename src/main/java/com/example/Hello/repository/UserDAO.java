@@ -1,7 +1,9 @@
 package com.example.Hello.repository;
 
+import java.util.Map;
 import java.util.Random;
 
+import com.example.Hello.dto.UserDTO;
 import com.example.Hello.model.User;
 import com.example.Hello.service.UserService;
 
@@ -73,6 +75,16 @@ public class UserDAO {
 
         System.out.println("[REPOSITORY]::[USERDAO]::[Update]::updateQuery" + updateQuery);
         jdbcTemplate.execute(updateQuery);
+    }
+
+    public Map<String, Object> getUserDetail(UserDTO user){
+        String searchQuery = String.format("select username, email from users where email = '%s'", user.getEmail());
+
+        System.out.println("[REPOSITORY]::[USERDAO]::[Search]::searchQuery " + searchQuery);
+        var resultSet = jdbcTemplate.queryForMap(searchQuery);
+        System.out.println("RESULTSET :::: " + resultSet);
+
+        return resultSet;
     }
 
 }

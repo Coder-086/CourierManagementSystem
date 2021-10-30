@@ -45,7 +45,7 @@
 						<div class="img-circle text-center mb-3">
 							<img src="../../static/pics/avatar.png" alt="Image" class="shadow">
 						</div>
-						<h4 class="text-center">Harry</h4>
+						<h4 class="text-center" id = "loggeduser">Harry</h4>
 					</div>
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true">

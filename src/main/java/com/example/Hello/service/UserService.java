@@ -4,6 +4,8 @@ import com.example.Hello.dto.UserDTO;
 import com.example.Hello.model.User;
 import com.example.Hello.repository.UserDAO;
 import com.example.Hello.repository.UserRepo;
+
+import java.util.Map;
 import java.util.Optional;
 import java.util.Random;
 
@@ -58,6 +60,8 @@ public class UserService {
     public boolean isValidEmail(User user) {
         try {
             User userDB = userRepo.getById(user.getEmail());
+            System.out.println(userDB);
+            System.out.println("I have this mail");
             return true;
         } catch (Exception ex) {
             return false;
@@ -91,6 +95,10 @@ public class UserService {
 
     public void updatePassword(User user) throws Exception{
         userDAO.updatePassword(user);
+    }
+
+    public Map<String, Object> getUserDetail(UserDTO user) throws Exception{
+        return  userDAO.getUserDetail(user);
     }
 
 }

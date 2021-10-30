@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 public class UserController {
     @Autowired
@@ -37,15 +39,15 @@ public class UserController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public ResponseEntity login(@RequestBody UserDTO user) throws  InterruptedException{
+    public ResponseEntity login(@RequestBody UserDTO user) throws  Exception{
 
         if (userService.isValidUser(user)) {
 
-            return new ResponseEntity<>(HttpStatus.OK);
+            Map<String, Object> result = userService.getUserDetail(user);
+            return new ResponseEntity<>(result, null, HttpStatus.OK);
         }
 
-
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
 
     @RequestMapping(value = "/sendotp", method = RequestMethod.POST)
@@ -139,4 +141,19 @@ public class UserController {
         userService.updatePassword(user);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    /*
+    @RequestMapping(value = "/contactdetails", method = RequestMethod.POST)
+    public ResponseEntity contactdetails(@RequestBody ContactDTO contactParam) throws Exception {
+        System.out.println("Contact >> " + contactParam.getName() + " " + contactParam.getEmail() + " " +
+                contactParam.getDesc());
+
+        Contact contact = new Contact();
+
+        contact.setName(contactParam.getName());
+        contact.setEmail(contactParam.getEmail());
+        contact.setDesc(contactParam.getDesc());
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }*/
 }

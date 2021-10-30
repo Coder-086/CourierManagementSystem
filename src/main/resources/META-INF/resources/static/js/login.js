@@ -27,23 +27,31 @@ function login(event){
     	headers: {
     		"Content-Type": "application/json"
     	},
-    		body: JSON.stringify({email, password, username: ""})
-    	}).then(data => data).then(res => {
-    		console.log(res);
-    		if (res.status == 200) {
-    			swal("Good job!", "Login Successfully", "success");
-    			localStorage.setItem('loginEmail', email);
-                console.log(localStorage.getItem('loginEmail'));
-    			setTimeout(()=>{
-                		window.open('/main', "_self");
-                },1500)
-    		} else {
-    			swal("OOPS!!!!!!", "Username or Password Incorrect", "warning");
-    		}
-    	}).catch(err => {
-    		swal("OOPS!!!!!!", "Failed to Login", "error");
-    	})
+    		body: JSON.stringify({
+    		    email: email,
+    		    password:  password})
+    	}).then(data => {
+          		if (data.status == 200) {
+          			return data.json();
+          		} else {
+          			swal("OOPS!!!!!!", "Username or Password Incorrect", "error");
+          			return;
+          		}
+          	})
+          	.then(res => {
+          		if(res) {
+          			swal("Great!", "LoggedIn Successfully", "success");
 
+          			localStorage.setItem('loggedUser', JSON.stringify(res));
+          			console.log(res);
+          			setTimeout(()=>{
+          				window.open('main', "_self");
+          			},500);
+          		}
+          	})
+          	.catch(err => {
+          		swal("OOPS!!!!!!", "Account Does't Exist", "error");
+          	})
 }
 
 function signup(event){
