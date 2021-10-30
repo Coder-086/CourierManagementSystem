@@ -3,7 +3,7 @@ userObj = JSON.parse(user);
 console.log(userObj);
 
 document.getElementById("loggeduser").innerHTML = userObj.username;
-
+document.getElementById("settinguser").innerHTML = userObj.username;
 function logout(event){
     event.preventDefault();
 

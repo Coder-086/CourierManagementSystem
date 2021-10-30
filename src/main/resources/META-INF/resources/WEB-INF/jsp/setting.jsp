@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../../static/css/setting.css">
+	<link rel="stylesheet" href="../../static/css/common.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
@@ -33,6 +34,12 @@
                          <li class="nav-item active">
                              <a class="nav-link" href="setting">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting</a>
                          </li>
+                          <li class="user">
+                              <a class="nav-link" href="setting">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello, </a>
+                          </li>
+                          <li class="nav-item active">
+                              <p id="loggeduser">&nbsp;&nbsp;USER </p>
+                          </li>
                      </ul>
                  </div>
      </nav>
@@ -45,7 +52,7 @@
 						<div class="img-circle text-center mb-3">
 							<img src="../../static/pics/avatar.png" alt="Image" class="shadow">
 						</div>
-						<h4 class="text-center" id = "loggeduser">Harry</h4>
+						<h4 class="text-center" id = "settinguser">Harry</h4>
 					</div>
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true">
