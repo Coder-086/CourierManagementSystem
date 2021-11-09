@@ -2,6 +2,8 @@ user = localStorage.getItem("loggedUser");
 userObj = JSON.parse(user);
 console.log(userObj);
 
+const domain = getDomain();
+
 document.getElementById("loggeduser").innerHTML = userObj.username;
 document.getElementById("settinguser").innerHTML = userObj.username;
 function logout(event){
@@ -26,7 +28,7 @@ function updateaccount(event){
 
     console.log(name, number, address);
 
-   fetch("http://localhost:8082/account" , {
+   fetch(`${domain}/account` , {
        method: "POST",
    		headers: {
    			"Content-Type": "application/json"
@@ -79,7 +81,7 @@ function updatepassword(event){
         }
 
         if(newpassword == confirmpassword){
-            fetch("http://localhost:8082/checkpassword", {
+            fetch(`${domain}/checkpassword`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
@@ -90,7 +92,7 @@ function updatepassword(event){
               })
             }).then(data => data).then(res => {
                 if (res.status == 200) {
-                   fetch("http://localhost:8082/updatepassword", {
+                   fetch(`${domain}/updatepassword`, {
                       method: "POST",
                       headers: {
                         "Content-Type": "application/json"

@@ -2,6 +2,10 @@ const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 
+const domain = getDomain();
+console.log(domain);
+
+
 sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
 });
@@ -22,7 +26,7 @@ function login(event){
     }
     console.log(email, password);
 
-    fetch("http://localhost:8082/login", {
+    fetch(`${domain}/login`, {
     	method: "POST",
     	headers: {
     		"Content-Type": "application/json"
@@ -82,7 +86,7 @@ function signup(event){
     }
 
     if(password == confirm_password){
-           fetch("http://localhost:8082/signup" , {
+           fetch(`${domain}/signup` , {
            			method: "POST",
            			headers: {
            				"Content-Type": "application/json"
@@ -122,7 +126,7 @@ function forget(event){
     		swal("OOPS!!!!!!", "Fill Up all the Columns", "warning");
     		return;
     	}
-    	fetch("http://localhost:8082/sendotp", {
+    	fetch(`${domain}/sendotp`, {
     		method: "POST",
     		headers: {
     			"Content-Type": "application/json"
@@ -172,7 +176,7 @@ function Otp(event){
 		swal("OOPS!!!!!!", "Please Enter the OTP", "warning");
 		return;
 	}
-	fetch("http://localhost:8082/checkotp", {
+	fetch(`${domain}/checkotp`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json"
@@ -215,7 +219,7 @@ function setpassword(event){
 		return;
 	}
 
-	fetch("http://localhost:8082/setpassword", {
+	fetch(`${domain}/setpassword`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json"

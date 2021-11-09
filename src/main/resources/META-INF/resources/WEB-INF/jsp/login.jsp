@@ -15,6 +15,7 @@
     ></script>
     <link rel="stylesheet" href="../../static/css/login.css"/>
     <title>Sign in & Sign up Form</title>
+    <script src="../../static/js/domain.js"></script>
   </head>
   <body>
     <div class="container">

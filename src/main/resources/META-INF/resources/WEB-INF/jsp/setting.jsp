@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="../../static/css/setting.css">
 	<link rel="stylesheet" href="../../static/css/common.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../static/js/domain.js"></script>
 </head>
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="../../static/css/forget.css">
 	<link rel="icon" href="../../static/pics/logo.jpg" type="image/x-icon">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../static/js/domain.js"></script>
 </head>
 <body>
 
